@@ -12,7 +12,7 @@ body {
   width: 43%;
   display: flex;
   justify-content: center;
-  background-color:#ff9aa2;
+  background-image:url("banner.jpg");
   padding: 10px;
 }
 
