@@ -4,9 +4,12 @@ body {
   background-color: #fff3f4;
   margin: 0;
   padding: 0;
+  cursor:url("Normal.cur"),auto;
+  background-image:url("https://i.pinimg.com/originals/95/46/63/954663a3d108406009a26dab1142e520.jpg");
 }
 
 .topnav {
+  width: 43%;
   display: flex;
   justify-content: center;
   background-color:#ff9aa2;
@@ -23,7 +26,21 @@ body {
 .topnav a.active {
   font-weight: bold;
 }
+.rectangle {
+  position: fixed; /* Fixează dreptunghiurile pe margini */
+  top: 0;
+  width: 100px; /* Lățimea dreptunghiurilor */
+  height: 100vh; /* Înălțimea dreptunghiurilor acoperă întreaga pagină */
+  background-image: url("floriST-removebg-preview.png");/* Culoare dreptunghi */
+}
 
+/* Dreptunghiul din stânga */
+.rectangle-left {
+  left: 0; /* Poziționează la marginea din stânga */
+}
+.rectangle-rights {
+  right: 0; /* Poziționează la marginea din stânga */
+}
 /* Floare cu mai multe petale */
 .flower-container {
   position: absolute;
@@ -41,7 +58,7 @@ body {
   width: 50px;
   height: 80px;
   border-radius: 50%;
-  background-color: #ff9aa2;
+  background-color: #ea7a84;
   transform-origin: bottom center;
   box-shadow: 0px 4px 6px rgba(253, 174, 174, 0.1);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -210,13 +227,18 @@ left: 50%; /* Centrează sub floare */
 transform: translateX(-50%);
 width: 250px; /* Lățimea balonului */
 padding: 10px 15px;
-background-color: #fff;
+background-color: #ffb2b7;
 color: #8b306b;
 border-radius: 10px;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 text-align: center;
 font-size: 14px;
 line-height: 1.4;
+}
+@media (max-width: 768px) {
+    .rectangle {
+        display: none;
+    }
 }
 
 /* Triunghi pentru speech bubble */
@@ -232,7 +254,7 @@ border-left: 10px solid transparent;
 border-right: 10px solid transparent;
 border-bottom: 10px solid #fff; /* Culoarea triunghiului */
 }
-footer {
+footer {width: 100%;
   text-align: center;
   background-color: #ff9aa2;
   padding: 20px;
@@ -243,4 +265,123 @@ footer .social-icons img {
   width: 30px;
   margin: 0 10px;
   cursor: pointer;
+}
+/* Learn more:
+    @link https://dev.to/5t3ph/pure-css-typing-animation-1nld */
+    
+    /* "Type" width
+    - controls how much the word container expands when each letter is "typed"
+    - will need adjusted depending on word and typeface */
+    :root {
+      --chWidth: 0.50em;
+      --chCount: 10;
+      --typeDuration: calc(180ms * var(--chCount));
+      --color: slateblue;
+      --bg: #f7f3ff;
+      --cursor: slateblue;
+  }
+  
+  body {
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      background-color: var(--bg);
+      color: var(--color);
+      font-family: Rosario, sans-serif;
+  }
+  
+  h1 {
+      font-size: 4.5rem;
+      text-align: center;
+  }
+  
+  .type-animation {
+      /* Required for keeping expected alignment */
+      display: inline-flex;
+      /* Start out by hiding via width and overflow */
+      width: 0;
+      overflow: hidden;
+      /* Leave room for cursor! */
+      padding-right: 0.10em;
+      position: relative;
+  }
+  
+  .type-animation::after {
+      content: "";
+      background: var(--bg);
+      position: absolute;
+      right: 0;
+      top: -0.05em;
+      bottom: -0.05em;
+      width: 0.10em;
+      border-right: 2px solid transparent;
+  }
+  
+  .type-animation.animating {
+      animation: type var(--typeDuration);
+      /* "stick" to last frame */
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+  }
+  
+  .type-animation.animating::after {
+      --cursorLoopCount: calc(((var(--chCount) + 1) * 180) / 320 + 3);
+      animation: cursor 320ms var(--cursorLoopCount) ease-in-out;
+  }
+  
+  @keyframes cursor {
+      0%,
+      100% {
+          border-color: var(--bg);
+      }
+      50% {
+          border-color: var(--cursor);
+      }
+      100% {
+          width: 0;
+      }
+  }
+  
+  @keyframes type {
+      0% {
+          width: 0;
+      }
+      100% {
+          width: calc((var(--chCount) - 1) * var(--chWidth));
+          padding-right: 0;
+      }
+  }
+  
+  button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0.75em;
+      background: transparent;
+      border-radius: 4px;
+      color: red;
+      border: 2px solid currentcolor;
+      min-height: 34px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+    
+  }
+  
+  .daisy {
+    position: fixed; /* Poziționare fixă în colț */
+    top: 20px; /* Distanță față de partea de jos */
+    right: 20px; /* Distanță față de partea dreaptă */
+    width: 100px; /* Dimensiunea floarei */
+    height: 100px;
+    background: url('sun.png') no-repeat center;
+    background-size: cover;
+    border-radius: 50%; /* Formă circulară */
+    
+    transition: transform 0.5s ease; /* Animație pentru rotație */
+    cursor: pointer; /* Schimbare cursor la hover */
+}
+
+.daisy:hover {
+    transform: rotate(360deg); /* Rotește complet la hover */
 }
