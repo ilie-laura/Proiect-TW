@@ -3,65 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet " href="style.css">
+    <link rel="stylesheet" href="styletry.css">
+
     <script src="java.js"></script>
-    <title>Personal website-IIL</title>
-    
-    
-    
+    <title>Personal Website - IIL</title>
 </head>
 
-<body><div class="daisy"></div>
-    <div class="rectangle rectangle-left"></div>
-    
-    <h1>My <span class="type-animation animating">personal</span> Website</h1>
-
-    <div class="topnav" style="font-size: xx-large;">
-        <a href="Profile.html" class="active">Home</a>
-        <a href="CV.html " class="active">CV</a>
-        <a href="Contact.html" class="active">Contact</a>
-       
-    </div>
-
-    <!-- Floare cu mai multe petale -->
-    
-    <div class="flower-container">
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-petal"></div>
-        <div class="flower-center">
-            <img src="pozaprofil.jpg" alt="Poza Profil">
+<body background="data:image/jpeg;base64,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">
+    <header id="header">
+        <nav class="navbar">
+            <div class="navleft">
+                <a class="logo" href="Profile.html">
+                    <img src="Untitled_design-removebg-preview.png" alt="Logo" >
+                </a>
+                <ul class="menu">
+                    <li class="menu3 menuitem"><a href="Profile.html">HOME</a>
+                    <div class="dropdown">
+                        <ul>
+                    <li ><a href="work.html">RECENT WORK</a></li>
+                    <li ><a href="#education">EDUCATION</a></li>
+                    <li ><a href="#compentencies">COMPENTENCIES</a></li>
+                    <li ><a href="#postes">HOBBIES</a></li>
+                
+                </ul>
+            </div>
+        </li>
+        <li class="menu1 menuitem"><a href="About.html">ABOUT</a>
+        </li>
+    </li>
+    <li class="menu3 menuitem"><a href="CV.html">CV</a>
+    <li class="menu3 menuitem"><a href="projects.html">PORTFOLIO</a>
+        <div class="dropdown">
+            <ul>
+                <li><a href="projects.html">Aplicatie 1</a></li>
+                <li><a href="projects.html">Aplicatie 2</a></li>
+                <li><a href="projects.html">Aplicatie 3</a></li>
+            </ul>
         </div>
-        <div class="speech-bubble">
-            <p>  Sunt Ilie Ioana Laura, studentă în anul 2 la Facultatea de Automatică și Calculatoare UPB,
-                cu cunoștințe în HTML, CSS și JavaScript.</p>
-        </div>
-    </div>
-  <section id="education" style="background-color: #ff9aa2;width:44.2%" >
-    <h3> ────୨ৎ────   Education────୨ৎ────────୨ৎ────────୨ৎ────────୨ৎ────</h3>
-    <ul>
-        <li>Licență în Informatică - Universitatea Politehnica Bucuresti -Automatica si Calculatoare,Ingineria Sistemelor(2023 -)</li>
-        <li>Diploma de Bacalaureat - Colegiul National de Informatica (2020 - 2023)</li>
-    </ul>
+    </li>
+    <li class="menu1 menuitem"><a href="Contact.html">CONTACT</a>
+</ul>
+</div>
 
+</nav>
 
-  </section>
-  <section id="comp" style="background-color: #ff9aa2;width:44.2%" >
-    <h3>────୨ৎ────Competences────୨ৎ────────୨ৎ────────୨ৎ────────୨ৎ────</h3>
-    <ul>
-        <li>HTML,CSS,JavaScript</li>
-        <li>C,C++</li>
-        <li>Matlab,AutoCAD,Spice</li>
-        <li>English C1</li>
-        <li>German B1</li>
-    </ul>
+<div class="burgermenu">
+<img src="menu.svg" alt="burgermenu icon">
+<div class="sidemenu">
+<ul>
+    <li class="menu1 sidemenuitem"><a href="Profile.html">HOME</a>
+        <ul class="sidedropdown">
+            <li><a href="projects.html">Recent projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#competencies">Competencies</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+    </li>
+    <li class="menu3 sidemenuitem"><a href="About.html">ABOUT</a></li>
+    <li class="menu1 sidemenuitem"><a href="projects.html">PORTFOLIO</a>
+        <ul class="sidedropdown">
+            <li><a href="projects.html">Aplicatie 1</a></li>
+            <li><a href="projects.html">Aplicatie 2</a></li>
+            <li><a href="projects.html">Aplicatie 3</a></li>
+        </ul>
+    </li>
 
-  </section>
+    <li class="menu1 sidemenuitem"><a href="Contact.html">CONTACT</a></li>
+</ul>
+</div>
+</div>
+        
+    
+    </header>
+    
+
+    <main><br><br><br><br><br><br><br>
+        <!-- Main Content -->
+        <div class="image-container">
+                <img class="profile-image" src="pozaprofil.jpg" alt="Poza Profil" style="width: 15%;"   >
+          
+<div class="speech-bubble">
+                <p>  Sunt Ilie Ioana Laura, studentă în anul 2 la Facultatea de Automatică și Calculatoare UPB,
+                    cu cunoștințe în HTML, CSS și JavaScript.</p>
+            </div>
+            </div>
+ <br><br><br >
     <div id="postes">
         <article class="posts">
             <div class="post-content">
@@ -121,11 +147,68 @@
             <h3 style="background-color: #ff9aa2;width: 100%; height: 45px;">Adresa</h3>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d311.43226978654536!2d26.05464642260705!3d44.444646099161766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201cb2973ca83%3A0x77d7ffb84fc9eac5!2sC%C4%83min%20P5-6!5e0!3m2!1sro!2sro!4v1729517342003!5m2!1sro!2sro" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
-    </div>
-   
+    </div> 
+    
+    <section id="compentencies" class="how-it-works">
+       <h2>Compentencies</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="icon">
+              <img src="j.png" alt="Step 1 Icon">
+              <h3>Java</h3>
+              <p>bla bla bla</p>
+            </div>
+           
+          </div>
+          <div class="step">
+            <div class="icon">
+              <img src="c.png" alt="Step 2 Icon"> 
+              <h3>C programming</h3>
+              <p>bla bla bla</p>
+            </div>
+          
+          </div>
+          <div class="step">
+            <div class="icon">
+              <img src="41e403424d95d65788e2911d16f10149-removebg-preview.png" alt="Step 3 Icon">
+            </div>
+            <h3>Photoshop</h3>
+            <p>bla bla bla</p>
+          </div>
+
+      </section>
+      
+    <section class="edu" id="education">
+        <h2>Education</h2>
+
+        <div class="timeline">
+            <div class="container2 right">
+                <div class="content">
+                    <h2>2023</h2>
+                    <p>Colegiul national de Informatica</p>
+                </div>
+            </div>
+
+            <div class="container2 left">
+                <div class="content">
+                    <h2>2023-2028</h2>
+                    <p>Facultatea de Automatica si Calculatoare</p>
+                </div>
+            </div>
+
+            <div class="container2 right">
+                <div class="content">
+                    <h2>2028</h2>
+                    <p>Master in Calculatoare</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
 
     <footer>
-      <p style="color: #8b306b;">&copy; 2024 Ioana Laura. 
+      <p style="color: #572345;">&copy; 2024 Ioana Laura. 
           <a href="https://www.instagram.com/liio_na/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
               <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
             </svg></a>
@@ -140,5 +223,15 @@
       </p>
   </footer>
 
+  <script>
+    const burgerMenu = document.querySelector('.burgermenu');
+const sideMenu = document.querySelector('.sidemenu');
+
+burgerMenu.addEventListener('click', () => {
+    sideMenu.classList.toggle('active');
+    burgerMenu.classList.toggle('open');
+});
+
+</script>
 </body>
 </html>

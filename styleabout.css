@@ -1,0 +1,363 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #333;
+}
+
+.navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f6dced;
+}
+
+.navbar .logo-img {
+    height: 100px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.menuitem a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menuitem a:hover {
+    color: whitesmoke;
+   
+}
+
+
+.profile-image {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #f4a7d9;
+    color: black;
+    padding: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-text {
+    max-width: 600px;
+  }
+  
+  .about-text h1 {
+    font-size: 3rem;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text h1 {
+      font-size: 2rem;
+    }
+  
+    .about-text p {
+      font-size: 1rem;
+    }
+  }
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.black-theme{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#161623;
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+  font-family: 'Lato', sans-serif;
+  letter-spacing:0.5px;
+  font-weight:400;
+  
+  &:before{
+    position:absolute;
+    content:"";
+    left:40%;
+    bottom:-40%;
+    width:600px;
+    height:600px;
+    background:linear-gradient(#e384bb, #ca81e5);
+    border-radius:50%;
+  }
+  
+  .card{
+    width:350px;
+    height:500px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+    border-radius:10px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    overflow:hidden;
+    
+    .card__top{
+       height:155px;
+           position:relative;
+      img{
+        width:100%;
+       height:100%;
+        object-fit:cover;
+      }
+      
+         .profile__photo{
+      width:130px;
+      height:130px;
+    position: absolute;
+    bottom: -60px;
+left:50%;
+           transform:translatex(-50%);
+   
+      img{
+        width:100%;
+        border-radius:50%;
+        height:100%;
+        object-fit:cover;
+           border:7px solid rgba(0,0,0,0.35);
+
+      }
+    }
+    }
+    .card__content{
+      text-align:center;
+      color:#fff;
+      padding:5em 2.5em;
+      h2{
+        font-weight:700;
+          font-size:24px;
+      }
+      h3{
+        font-weight:400;
+        margin:5px 0 30px;
+        font-size:16px;
+      }
+      
+      p{
+             text-align:left;
+        
+        span{
+          margin-right:10px;
+        }
+        a{
+          text-decoration:none;
+          color:#fff;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+
+      }
+      p+p{
+        margin-top:10px;
+      }
+      
+    }
+    a.button{
+          text-decoration:none;
+          color:#fff;
+      background:rgba(0,0,0,0.85);
+      padding:9px 30px 10px 30px;
+      display:inline-block;
+      margin-top:2em;
+      
+      hover{
+         background:rgba(0,0,0,0.7);
+      }
+    }
+  }
+}
+
+.white-theme{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+background-color: #f23fb6;
+background-image: linear-gradient(135deg, #3fe2f2 0%, #43dbc0 16%, #29b7f2 49%, #3cabe8 86%);
+  position:relative;
+  min-height:100vh;
+  overflow:hidden;
+  font-family: 'Lato', sans-serif;
+  letter-spacing:0.5px;
+  font-weight:400;
+  
+  &:before{
+    position:absolute;
+    content:"";
+    left:40%;
+    bottom:-40%;
+    width:600px;
+    height:600px;
+background: linear-gradient(135deg, #3fe2f2 0%, #43dbc0 24%, #3cabe8 91%);
+    border-radius: 50%;
+  }
+  
+  .card{
+    width:350px;
+    height:500px;
+background: rgba( 255, 255, 255, 0.30 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+border-radius: 10px;
+    overflow:hidden;
+    
+    .card__top{
+       height:155px;
+           position:relative;
+      img{
+        width:100%;
+       height:100%;
+        object-fit:cover;
+      }
+      
+         .profile__photo{
+      width:130px;
+      height:130px;
+    position: absolute;
+    bottom: -60px;
+left:50%;
+           transform:translatex(-50%);
+   
+      img{
+        width:100%;
+        border-radius:50%;
+        height:100%;
+        object-fit:cover;
+           border:8px solid rgba(255,255,255,0.55);
+
+      }
+    }
+    }
+    .card__content{
+      text-align:center;
+      color:black;
+      padding:5em 2.5em;
+      h2{
+        font-weight:700;
+          font-size:24px;
+      }
+      h3{
+        font-weight:400;
+        margin:5px 0 30px;
+        font-size:16px;
+      }
+      
+      p{
+             text-align:left;
+        
+        span{
+          margin-right:10px;
+        }
+        a{
+          text-decoration:none;
+          color:black;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+
+      }
+      p+p{
+        margin-top:10px;
+      }
+      
+    }
+    a.button{
+          text-decoration:none;
+          color:white;
+      background:black;
+      padding:9px 30px 10px 30px;
+      display:inline-block;
+      margin-top:2em;
+      
+      .hover{
+         background:rgba(0,0,0,0.7);
+      }
+    }
+  }
+
+}
+
+  #switch{
+    position:absolute;
+    top:35px;
+    right:35px;
+    background:white;
+    border-radius:50px;
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    
+    .hover i{
+      animation:rotation 1.5s linear forwards infinite;
+    }
+    
+    i{
+      font-size:1.5rem;
+    }
+    @keyframes rotation{
+      0%{
+        transform:rotate(0deg);
+      }
+       100%{
+        transform:rotate(360deg);
+      }
+    }
+  }

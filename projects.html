@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* General Styles */
+        footer a {
+            color: #000000;
+            text-decoration: none;
+        }
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f3;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #ff77aa;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px #ffcce0;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .game-card {
+            position: relative;
+            width: 250px;
+            height: 350px;
+            background-color: #ffccdd;
+            border-radius: 20px;
+            border: 2px solid #ff99c2;
+            box-shadow: 0 6px 12px rgba(255, 153, 194, 0.4);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 153, 194, 0.6);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid #ff99c2;
+        }
+
+        .game-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 130px;
+            background-color: #ff99c2;
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .game-card:hover .game-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .game-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+
+        .game-description {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        /* Cute Decoration */
+        .decorations {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #ff99c2;
+            box-shadow: 0 4px 6px rgba(255, 153, 194, 0.4);
+        }
+
+        .decorations.pink {
+            background-color: #ffccdd;
+        }
+
+        .decorations.one {
+            top: 10px;
+            left: 10px;
+        }
+
+        .decorations.two {
+            top: 10px;
+            right: 10px;
+        }
+
+        .decorations.three {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .decorations.four {
+            bottom: 10px;
+            right: 10px;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header .logo img {
+            height: 100px;
+        }
+         /* Burger Menu Styles */
+         .burger-menu {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #ff77aa;
+            border-radius: 50%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .burger-menu div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-open .burger-menu div:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-open .burger-menu div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-open .burger-menu div:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background-color: #ffe6f3;
+            box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 90;
+            flex-direction: column;
+        }
+
+        .menu a {
+            color: #ff77aa;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #d65689;
+        }
+
+        .menu-open .menu {
+            display: flex;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .burger-menu {
+                display: flex;
+            }
+
+            .game-container {
+                flex-direction: column;
+            }
+        }
+        footer {
+            background-color: #ec96d1;
+            color: rgb(211, 119, 183);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>  <a class="logo" href="Profile.html">
+        <img src="Untitled_design-removebg-preview.png" alt="Logo" >
+    </a></header>
+
+    <div class="burger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="menu">
+        <a href="#Game 1">Fluffy Adventures</a>
+        <a href="#Game 2">Pink Galaxy</a>
+        <a href="#Game 3">Sweet Racer</a>
+    </div>
+
+
+    <h1>Small projects</h1>
+    <div class="game-container">
+        <!-- Game 1 -->
+        <div class="game-card">
+            <img src="forest.jpg" alt="Game 1">
+            <div class="game-info">
+                <div class="game-title">Fluffy Adventures</div>
+                <div class="game-description">
+                    Join adorable creatures on a heartwarming quest through cotton candy forests!
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 2 -->
+        <div class="game-card">
+            <img src="cute cafe.png" alt="Game 2">
+            <div class="game-info">
+                <div class="game-title">Pink Galaxy</div>
+                <div class="game-description">
+                    Explore a pink-tinted universe and uncover hidden treasures among the stars.
+                </div>
+            </div>
+        </div>
+
+        <!-- Game 3 -->
+        <div class="game-card">
+            <img src="car.png" alt="Game 3">
+            <div class="game-info">
+                <div class="game-title">Sweet Racer</div>
+                <div class="game-description">
+                    Race through candy-coated tracks and become the champion of sugar rush!
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="color: #000000;">&copy; 2024 Ioana Laura. 
+            <a href="https://www.instagram.com/liio_na/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+              </svg></a>
+              
+              <a href="https://www.facebook.com/laura.ilie.144/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg></a>
+              <a href="https://ro.pinterest.com/FreopaK/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+              </svg></a>
+             
+        </p>
+    </footer>
+    <script>
+        // Burger Menu Toggle
+        const burgerMenu = document.querySelector('.burger-menu');
+        const menu = document.querySelector('.menu');
+        document.body.classList.remove('menu-open'); // Ensure closed on load
+
+        burgerMenu.addEventListener('click', () => {
+            document.body.classList.toggle('menu-open');
+        });
+    </script>
+</body>
+</html>

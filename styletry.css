@@ -1,0 +1,847 @@
+@import url("https://use.typekit.net/arj4ntw.css");
+:root {
+  /* Colors */
+  --gray: #fae7e3;
+  --white: #fbfcff;
+  --dark: #01161e;
+  --slate: #505168;
+  /* green 1 */
+  --green1: #e99bca;
+  /* green 2 */
+  --green2: #bbf1c4;
+  /* pink 1 */
+  --pink1: #f4b5c7;
+  /* pink 2 */
+  --pink2: #f49ac2;
+  /* Fonts */
+  --urbane: "urbane", sans-serif;
+  /* Weight: 100, 200, 300, 500, 600, 700 */
+  --nova: "proxima-nova", sans-serif;
+  /* Weight: 300 */
+  --mencken: "mencken-std", sans-serif;
+  /* Weight: 700 */
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: var(--pink1);
+  overflow-x: hidden;
+}
+  header {
+    position: relative;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation bar: using flex, elements get automatically placed in the 
+  container, according to the size of the viewport. Margin and padding are 0
+  so that the elements get arranged to the left */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    border-bottom: 3px solid var(--gray);
+    position: relative;
+ 
+   background-color:#ffd3d3;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+  }
+  
+  .navleft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    display: block;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 50%;
+    width: auto;
+    z-index: 2;
+  }
+  
+  .logo img {
+    width: 30%;
+    height: 30%;
+  }
+  
+  .menu {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+  }
+  
+  .menuitem {
+    display: inline-block;
+    margin-left: 1.5vw;
+  }
+  
+  .menu a,
+  .menuRight a {
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--urbane);
+    font-weight: 200;
+    font-size: 1.1rem;
+    color: var(--slate);
+    margin: 0;
+    padding: 0px 8px 0px 8px;
+    cursor: pointer;
+  }
+  
+  .menuRight {
+    margin-right: 20px;
+  }
+  
+  .menuRight li {
+    display: inline-block;
+    margin: 0;
+    margin-right: 1.5vw;
+  }
+  
+  /* Burgermenu is not displayed while the resolution is bigger than 400px */
+  .burgermenu {
+    display: none; /* Va fi vizibil doar pe dispozitive mici */
+   
+  } 
+  .burgermenu img {
+    height: 80px;
+    width: 80px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    padding: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+  .sidemenu {
+    width: 100vw;
+    background-color: var(--white);
+    position: absolute;
+    right: 0px;
+    transform: translateX(150%);
+    box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.096);
+    display: none;
+  }
+  
+  .sidemenu ul {
+    list-style: none;
+    width: 100%;
+  }
+  
+  .sidemenu li {
+    margin-bottom: 30px;
+  }
+  
+  .sidemenu a {
+    text-decoration: none;
+    font-family: var(--urbane);
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: var(--dark);
+    padding: 0px 8px 0px 8px;
+  }
+  
+  .sidemenu a:hover {
+    color: var(--white);
+    background-color: var(--dark);
+  }
+  
+  .burgermenu img:hover {
+    padding-left: 100vw;
+  }
+  
+  .burgermenu:hover .sidemenu {
+    animation: sidemenu 0.2s linear forwards;
+    display: block;
+  }
+  
+  @keyframes sidemenu {
+    from {
+      transform: translateX(150%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  .menuRight a:hover {
+    color: var(--white);
+    background-color: var(--pink1);
+  }
+  
+  /* Hover specifications for each category of the menu */
+  .menu1 a:hover {
+    color: var(--white);
+    background-color: var(--green1);
+  }
+  
+  .menuitem:hover .m1 {
+    transform: translateX(-50%) scaleY(0.25);
+  }
+  
+  .menuitem:hover .m2 {
+    transform: translateX(-50%) scaleY(0.25);
+  }
+  
+  .menuitem:hover .m3 {
+    transform: translateX(-50%) scaleY(0.25);
+  }
+  
+  .menuitem:hover .m4 {
+    transform: translateX(-50%) scaleY(0.25);
+  }
+  
+  .menu2 a:hover {
+    color: var(--white);
+    background-color: var(--green2);
+  }
+  
+  .menu3 a:hover {
+    color: var(--white);
+    background-color: var(--pink2);
+  }
+  
+  .menu1,
+  .menu2,
+  .menu3,
+  .menu4 {
+    position: relative;
+  }
+  
+  .m1,
+  .m2,
+  .m3,
+  .m4 {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    left: 50%;
+    top: -35px;
+    transform-origin: bottom;
+    transform: translateX(-50%) scaleY(0);
+    transition: 0.3s;
+  }
+  
+  .menuitem:hover:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%);
+  
+  }
+  
+  /* Dropdown menu */
+  /* Dropdown menu is not displayed normaally. Its position is absolute because
+  it has to be right under the category it was assigned to. */
+  .dropdown {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0px;
+    left: 0;
+    background-color: #fbfcff;
+    width: 280px;
+    margin-top: 55px;
+    box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.096);
+  }
+  
+  .dropdown::after {
+    content: none;
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-left: -3rem;
+  }
+  
+  .dropdown li {
+    display: list-item;
+    text-align: left;
+    text-decoration: none;
+    font-family: var(--urbane);
+    font-weight: 200;
+    font-size: 1rem;
+    color: var(--slate);
+    margin: 10px;
+    padding: 0px 8px 0px 8px;
+  }
+  
+  /* Dropdown menu is only displayed while hovering on a category */
+  .menuitem:hover .dropdown {
+    display: block;
+  }
+  
+  /* Dropdown Sidemenu */
+  /* Only takes effect when the resolution is under a certain threshold. Works
+  on the same principle as the normal dropdown menu. */
+  
+  .sidedropdown {
+    display: none;
+    background-color: #d0ccd025;
+    padding-top: 5px;
+    margin-bottom: 0;
+  }
+  
+  .sidedropdown:after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    height: 25px;
+    width: 100%;
+  }
+  
+  .sidemenuitem {
+    cursor: pointer;
+  }
+  
+  .sidemenuitem:hover .sidedropdown {
+    display: block;
+  }
+
+/* Balonul de dialog */
+.image-container {
+    display: flex;
+    flex-direction: column; /* Aliniere pe verticală */
+    align-items: center; /* Centrează pe orizontală */
+    position: relative; /* Poziționare relativă pentru a ancora balonul */
+    margin: 2% auto; /* Centrează pe pagină */
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 100%; /* Poziționează sub imagine */
+    left: 50%;
+    bottom: auto;
+    transform: translate(-50%, 10px); /* Centrează și adaugă spațiu între imagine și balon */
+    width: 50%; /* Dimensiune flexibilă */
+    background-color: #ffcdd0;
+    color: #530f3b;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+/* Triunghi pentru balon */
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: -10px; /* Deasupra balonului */
+    left: 50%; /* Centrează triunghiul */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffb2b7; /* Culoarea triunghiului */
+}
+
+/* Responsivitate pentru mobil */
+@media (max-width: 768px) {
+    .speech-bubble {
+        width: 80%; /* Dimensiune mai mică pe mobil */
+        font-size: 16px; /* Text mai mic pe mobil */
+        transform: translate(-50%, 5px); /* Ajustează spațiul pe mobil */
+    }
+}
+
+@media (max-width: 480px) {
+    .speech-bubble {
+        width: 70%;
+        font-size: 14px;
+    }
+
+   
+}
+
+    footer {width: 100%;
+      text-align: center;
+      background-color: #ff9aa2;
+      padding: 20px;
+      color:#530f3b;
+    }
+    
+    footer .social-icons img {
+      width: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    
+/* Structură pentru postările cu imagine în stânga */
+#postes {
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  
+  .posts {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 0px 5px #FFFAF0;
+    background-color: #FFFAF0;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 5px;
+    border: 10px solid transparent;
+    border-image-source: url("https://static.tumblr.com/vsycwa1/9nurvtcax/pale7_opacity2.png");
+    border-image-repeat: round;
+    border-image-slice: 100;
+  }
+  
+  .posts:hover {
+    border-image-source: url("https://static.tumblr.com/vsycwa1/Bd4rvtcax/pale7_opacity.png");
+  }
+  
+  .post-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .post-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-description {
+    flex: 1;
+  }
+  
+  .post-description h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #530f3b;
+  }
+  
+  .post-description p {
+    margin: 5px 0 0;
+    color: #530f3b;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  /* Stil pentru galerie */
+  .gallery {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  }
+  
+  .gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+  transform: scale(1.1);
+  }
+  
+  /* Stil pentru buton */
+  .toggle-gallery-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 1em;
+  background-color: #ff9aa2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  .toggle-gallery-btn:hover {
+  background-color: #ff9aa2;
+  }
+  
+  footer {
+    text-align: center;
+    margin: 20px 0;
+    font-size:18px;
+    color: rgb(236, 81, 182);
+  }
+  .profile-image {
+    display: block;
+    margin: 0 auto; /* Centrează imaginea pe orizontală */
+    width: 150px; /* Dimensiunea imaginii */
+    height: 150px;
+  
+    object-fit: cover;
+    position: relative; /* Poziționare relativă pentru a ancora balonul */
+}
+@media (max-width: 768px) {
+    .profile-image {
+        width: 140px; /* Imagine mai mică pe mobil */
+        height: 140px;
+    }
+
+    .speech-bubble {
+        width: 200px; /* Dimensiune ajustată */
+        font-size: 12px;
+        top: calc(100% + 5px); /* Reduce spațiul pe mobil */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .speech-bubble {
+        width: 150px;
+        font-size: 10px;
+    }
+}
+
+/* Dropdown menu */
+/* Dropdown menu is not displayed normaally. Its position is absolute because
+it has to be right under the category it was assigned to. */
+.dropdown {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0px;
+    left: 0;
+    background-color: #fbfcff;
+    width: 280px;
+    margin-top: 55px;
+    box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.096);
+  }
+  
+  .dropdown::after {
+    content: none;
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-left: -3rem;
+  }
+  
+  .dropdown li {
+    display: list-item;
+    text-align: left;
+    text-decoration: none;
+    font-family: var(--urbane);
+    font-weight: 200;
+    font-size: 1rem;
+    color: var(--slate);
+    margin: 10px;
+    padding: 0px 8px 0px 8px;
+  }
+  
+  /* Dropdown menu is only displayed while hovering on a category */
+  .menuitem:hover .dropdown {
+    display: block;
+  }
+  
+  /* Dropdown Sidemenu */
+  /* Only takes effect when the resolution is under a certain threshold. Works
+  on the same principle as the normal dropdown menu. */
+  
+  .sidedropdown {
+    display: none;
+    background-color: #d0ccd025;
+    padding-top: 5px;
+    margin-bottom: 0;
+  }
+  
+  .sidedropdown:after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    height: 25px;
+    width: 100%;
+  }
+  
+  .sidemenuitem {
+    cursor: pointer;
+  }
+  
+  .sidemenuitem:hover .sidedropdown {
+    display: block;
+  }
+  .dropdown-trigger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Dropdown-ul */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Sub imagine */
+    right: 0; /* Afișează pe dreapta */
+    background-color: #f60000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 100;
+    min-width: 150px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 10px;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #f4b5c7;
+    color: white;
+}
+/* Ascunde meniul dropdown inițial */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Ajustează în funcție de poziția imaginii */
+  right: 0; /* Aliniază la dreapta */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+  /* On a full HD resolution, the normal menu is displayed*/
+  .menu,
+  .menuRight {
+    display: none;
+  }
+
+  .burgermenu {
+    display: block;
+  }
+}
+/* Education section */
+/* Education section parameters */
+
+.edu {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.edu h2 {
+  font-family: var(--urbane);
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Timeline */
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #f79eb7;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container2 {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container2::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #ffffff;
+  border: 4px solid #f3c8c8;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: -14%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #f3c8c8;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #eaf6ee;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #f3c8c8;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #eaf6ee transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #f3c8c8;
+  position: relative;
+  border-radius: 6px;
+}
+.how-it-works {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: "data:image/jpeg;base64,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";
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step {
+  flex: 1 1 calc(25% - 20px);
+  max-width: 25%;
+  text-align: center;
+  background-color: #f3c8c8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #040e0f;
+  line-height: 1.5;
+}
+
+.step p strong {
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .step {
+    max-width: 100%;
+  }
+}

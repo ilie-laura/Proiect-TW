@@ -5,19 +5,19 @@ body {
   margin: 0;
   padding: 0;
   cursor:url("Normal.cur"),auto;
-  background-image:url("https://i.pinimg.com/originals/95/46/63/954663a3d108406009a26dab1142e520.jpg");
+  background-image:-webkit-repeating-radial-gradient(center center, circle, #ff9aa2, #ec9aff 1px, #9abaff 1px, #ff9aa2 2px);
 }
 
 .topnav {
-  width: 43%;
+  width: 42%;
   display: flex;
   justify-content: center;
   background-image:url("banner.jpg");
-  padding: 10px;
+  padding: 1%;
 }
 
 .topnav a {
-  margin: 0 15px;
+  margin: 0 15%;
   text-decoration: none;
   color: #8b306b;
   font-size: larger;
@@ -29,9 +29,9 @@ body {
 .rectangle {
   position: fixed; /* Fixează dreptunghiurile pe margini */
   top: 0;
-  width: 100px; /* Lățimea dreptunghiurilor */
+  width: 100; /* Lățimea dreptunghiurilor */
   height: 100vh; /* Înălțimea dreptunghiurilor acoperă întreaga pagină */
-  background-image: url("floriST-removebg-preview.png");/* Culoare dreptunghi */
+  background-image: url("floriST-removebg-preview.png");
 }
 
 /* Dreptunghiul din stânga */
@@ -78,17 +78,17 @@ box-shadow: 0px 8px 12px rgba(219, 86, 208, 0.3); /* Adaugă o umbră mai pronun
 .flower-petal:nth-child(6) { transform: rotate(225deg) translateY(-50%); }
 .flower-petal:nth-child(7) { transform: rotate(270deg) translateY(-50%); }
 .flower-petal:nth-child(8) { transform: rotate(315deg) translateY(-50%); }
-.flower-petal:nth-child(1):hover { background-color: #ff4d4d; } /* Roșu intens */
-.flower-petal:nth-child(2):hover { background-color: #ffa64d; } /* Portocaliu intens */
-.flower-petal:nth-child(3):hover { background-color: #ffff4d; } /* Galben intens */
-.flower-petal:nth-child(4):hover { background-color: #4dff4d; } /* Verde intens */
-.flower-petal:nth-child(5):hover { background-color: #4d4dff; } /* Albastru intens */
-.flower-petal:nth-child(6):hover { background-color: #9933ff; } /* Indigo intens */
-.flower-petal:nth-child(7):hover { background-color: #ff4dff; } /* Violet intens */
-.flower-petal:nth-child(8):hover { background-color: #ff66b3; } /* Roz intens */
+.flower-petal:nth-child(1):hover { background-color: #ff4d4d; } 
+.flower-petal:nth-child(2):hover { background-color: #ffa64d; } 
+.flower-petal:nth-child(3):hover { background-color: #ffff4d; } 
+.flower-petal:nth-child(4):hover { background-color: #4dff4d; } 
+.flower-petal:nth-child(5):hover { background-color: #4d4dff; } 
+.flower-petal:nth-child(6):hover { background-color: #9933ff; } 
+.flower-petal:nth-child(7):hover { background-color: #ff4dff; } 
+.flower-petal:nth-child(8):hover { background-color: #ff66b3; }
 
 .flower-center {
-position: absolute; /* Corectare poziționare */
+position: absolute; 
 top: 69%;
 left: 50%;
 width: 80px;
@@ -266,12 +266,7 @@ footer .social-icons img {
   margin: 0 10px;
   cursor: pointer;
 }
-/* Learn more:
-    @link https://dev.to/5t3ph/pure-css-typing-animation-1nld */
-    
-    /* "Type" width
-    - controls how much the word container expands when each letter is "typed"
-    - will need adjusted depending on word and typeface */
+
     :root {
       --chWidth: 0.50em;
       --chCount: 10;
